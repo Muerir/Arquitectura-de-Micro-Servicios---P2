@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: ms-config_server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Muerir/Arquitectura-de-Micro-Servicios---P2
+          default-label: "main"
+server:
+  port: 8887
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8763/eureka

@@ -1,0 +1,11 @@
+POST http://localhost:8743/v1/api/course/save
+Content-Type: application/json
+
+{
+  "teacherId": 3,
+  "studentId": 3,
+  "course": 3,
+  "gradeDescription": "Matemáticas"
+}
+
+###

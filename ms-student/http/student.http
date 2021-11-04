@@ -31,3 +31,15 @@ Content-Type: application/json
   "lastName": "Mingo",
   "phone": "766543246"
 }
+
+###
+
+POST http://localhost:8181/ms-student/v1/api/student/save
+Content-Type: application/json
+
+{
+  "name": "Diego",
+  "lastName": "Córdova",
+  "phone": "12345678"
+}
+

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("v1/api/teacher")
@@ -43,5 +44,16 @@ public class TeacherController {
     public List<Teacher> getAllTeacher(){
         List<Teacher> teachers = teacherRepository.findAll();
         return teachers;
+    }
+
+    @RequestMapping (path = "/get",
+            method = RequestMethod.GET)
+    public Integer getTeacherCourse(@RequestParam Integer id) {
+        Optional<Teacher> teacherOptional = teacherRepository.findById(id);
+        if(teacherOptional.isPresent()){
+            return 1;
+        }else{
+            return 0;
+        }
     }
 }

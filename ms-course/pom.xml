@@ -8,11 +8,11 @@
 		<version>2.5.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>arquitectura.software</groupId>
-	<artifactId>ms-student</artifactId>
+	<groupId>Arquitectura.Software</groupId>
+	<artifactId>ms-course</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ms-student</name>
-	<description>Demo project for ms-student</description>
+	<name>ms-course</name>
+	<description>Demo project for ms-course</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2020.0.4</spring-cloud.version>
@@ -43,11 +43,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-bootstrap</artifactId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>

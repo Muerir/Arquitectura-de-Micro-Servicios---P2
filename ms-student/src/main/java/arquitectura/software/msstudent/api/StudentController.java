@@ -45,4 +45,15 @@ public class StudentController {
         }
 
     }
+
+    @RequestMapping (path = "/get",
+            method = RequestMethod.GET)
+    public Integer getTeacherCourse(@RequestParam Integer id) {
+        Optional<Student> studentOptional = studentRepository.findById(id);
+        if(studentOptional.isPresent()){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
 }
