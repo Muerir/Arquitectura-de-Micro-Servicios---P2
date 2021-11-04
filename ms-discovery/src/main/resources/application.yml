@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ms-discovery
+
+server:
+  port: 8763
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    lease-expiration-duration-in-seconds: 20
+  server:
+    enableSelfPreservation: false
+    evictionIntervalTimerInMs: 3000
+  client:
+    fetch-registry: false
+    register-with-eureka: false

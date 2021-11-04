@@ -1,0 +1,33 @@
+POST http://localhost:6945/v1/api/student/save
+Content-Type: application/json
+
+{
+  "name": "Diego",
+  "lastName": "Córdova",
+  "phone": "12345678"
+}
+
+###
+
+### Obtener cliente por ID
+GET http://localhost:6945/v1/api/student?studentId=1
+Accept: application/json
+
+### Obtener todos los clientes
+GET http://localhost:6945/v1/api/student/all
+Accept: application/json
+
+### Prueba
+GET http://localhost:6945/v1/api/student/test
+Accept: application/json
+
+### Guardar un cliente
+
+POST http://localhost:6945/v1/api/student/save
+Content-Type: application/json
+
+{
+  "name": "Deigos",
+  "lastName": "Mingo",
+  "phone": "766543246"
+}
