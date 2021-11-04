@@ -1,0 +1,16 @@
+
+spring:
+  application:
+    name: ms-course
+  h2:
+    console:
+      enabled: true
+server:
+  port: 8743
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8763/eureka
