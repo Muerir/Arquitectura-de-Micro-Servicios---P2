@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/Muerir/Arquitectura-de-Micro-Servicios---P2
+          uri: https://github.com/Muerir/ms-config_server
           default-label: "main"
 server:
   port: 8887
