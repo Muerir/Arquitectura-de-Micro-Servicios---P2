@@ -2,6 +2,8 @@
 spring:
   application:
     name: ms-course
+  zipkin:
+    base-url: http://localhost:9411/
   h2:
     console:
       enabled: true
