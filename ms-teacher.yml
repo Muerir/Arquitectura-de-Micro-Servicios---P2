@@ -1,11 +1,14 @@
 spring:
   application:
     name: ms-teacher
+  zipkin:
+    base-url: http://localhost:9411/
   h2:
     console:
       enabled: true
 server:
   port: 7878
+  
 
 eureka:
   client:
