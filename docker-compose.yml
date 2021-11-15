@@ -1,0 +1,50 @@
+version: "2.4"
+
+services:
+  ms-discovery:
+    image: ms-discovery:0.0.1
+    mem_limit: 200m
+    ports:
+      - "8763:8763"
+    environment:
+      - "EUREKA_URI=http://172.23.0.1:8763/eureka"
+  ms-student:
+    image: ms-student:0.0.1
+    mem_limit: 200m
+#    ports:
+#       - "6945:6945"
+    environment:
+       - "EUREKA_URI:http://172.23.0.1:8763/eureka"
+    depends_on:
+      ms-discovery:
+        condition: service_started
+  ms-teacher:
+    image: ms-teacher:0.0.1
+    mem_limit: 200m
+    ports:
+        - "7878:7878"
+    environment:
+       - "EUREKA_URI:http://172.23.0.1:8763/eureka"
+    depends_on:
+      ms-discovery:
+        condition: service_started
+  ms-course:
+    image: ms-course:0.0.1
+    mem_limit: 200m
+    ports:
+        - "8743:8743"
+    environment:
+       - "EUREKA_URI:http://172.23.0.1:8763/eureka"
+    depends_on:
+      ms-discovery:
+        condition: service_started
+  ms-gateway:
+    image: ms-gateway:0.0.1
+    mem_limit: 200m
+    ports:
+        - "8181:8181"
+    environment:
+       - "EUREKA_URI:http://172.23.0.1:8763/eureka"
+    depends_on:
+      ms-discovery:
+        condition: service_started

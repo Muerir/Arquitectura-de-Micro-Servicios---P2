@@ -7,16 +7,18 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+  zipkin:
+    base-url: http://localhost:9411/
 
 server:
-  port: 8181
+  port: ${SERVER_PORT:8181}
 
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
     serviceUrl:
-      defaultZone: http://localhost:8763/eureka
+      defaultZone: ${EUREKA_URI:http://localhost:8763/eureka}
   instance:
     hostname: localhost
     prefer-ip-address: true

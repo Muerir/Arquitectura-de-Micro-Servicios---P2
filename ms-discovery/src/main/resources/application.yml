@@ -3,7 +3,7 @@ spring:
     name: ms-discovery
 
 server:
-  port: 8763
+  port: ${SERVER_PORT:8763}
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
@@ -14,3 +14,5 @@ eureka:
   client:
     fetch-registry: false
     register-with-eureka: false
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8763/eureka}
