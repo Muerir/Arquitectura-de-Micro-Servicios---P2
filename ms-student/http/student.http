@@ -43,3 +43,7 @@ Content-Type: application/json
   "phone": "12345678"
 }
 
+### Obtener todos los clientes
+GET http://localhost:8181/ms-student/v1/api/student/all
+Accept: application/json
+
