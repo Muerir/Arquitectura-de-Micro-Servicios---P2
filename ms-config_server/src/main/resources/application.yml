@@ -16,3 +16,6 @@ eureka:
     register-with-eureka: true
     serviceUrl:
       defaultZone: http://localhost:8763/eureka
+
+encrypt:
+  key: abc123
